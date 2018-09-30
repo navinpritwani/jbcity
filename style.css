@@ -38,58 +38,14 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 /* Sizes */
 
+.bloc-xl{
+	padding:150px 50px;
+}
 .bloc-lg{
 	padding:100px 50px;
 }
 .bloc-md{
 	padding:50px;
-}
-
-/* = Full Screen Blocs 
--------------------------------------------------------------- */
-
-.bloc-fill-screen{
-	padding-top:0;
-	position: relative;
-	height: inherit;
-}
-.bloc-fill-screen > .container{
-	position:relative;
-	top:50%;
-	transform:translateY(-50%);
-	-webkit-transform:translateY(-50%);
-}
-.bloc-fill-screen .fill-bloc-top-edge, .bloc-fill-screen .fill-bloc-bottom-edge{
-	position: absolute;
-	margin: 20px auto;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	transform: none;
-}
-.bloc-fill-screen .fill-bloc-top-edge{
-	top:0;
-}
-.bloc-fill-screen .fill-bloc-bottom-edge{
-	top: initial;
-	bottom: 20px;
-}
-.blocs-hero-btn-dwn{
-	width: 58px;
-	height: 58px;
-	display: block;
-	margin:0 auto;
-	line-height: 58px;
-	padding: 0;
-	border-radius: 50%;
-	text-align: center;
-	font-size: 18px;
-	color: rgba(255,255,255,.8);
-	background: rgba(0,0,0,.6);
-	border:0;
-}
-.blocs-hero-btn-dwn:hover{
-	color: rgba(255,255,255,1);
 }
 
 
@@ -107,6 +63,13 @@ a:hover{text-decoration: none; cursor:pointer;}
 .texture-geometry-shapes-2::before{
 	background: url("img/texture-geometry-shapes-2.png");
 	background-size: 200px 200px;
+}
+
+
+/* Background Effects */
+
+.b-parallax{
+	background-attachment:fixed;
 }
 
 
@@ -197,15 +160,15 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 /* Bloc text custom styling */
 
-#bloc-0 h1{
+#bloc-1 h1{
 	font-size: 42px;
 	line-height: 60px;
 }
-#bloc-1 h4{
+#bloc-2 h4{
 	line-height: 24px;
 	font-size: 24px;
 }
-#bloc-2 h4{
+#bloc-3 h4{
 	line-height: 24px;
 	font-size: 24px;
 }
@@ -337,6 +300,16 @@ nav .caret{
 	margin: 6px -5px 0 0!important;
 	float: right;
 }
+/* = Sticky Nav
+-------------------------------------------------------------- */
+
+.sticky-nav.sticky{
+	position:fixed;
+	top:0;
+	z-index:1000;
+	box-shadow:0 1px 2px rgba(0,0,0,.3);
+	 transition: all .2s ease-out;
+}
 
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
@@ -351,6 +324,18 @@ nav .caret{
 .mg-lg{
 	margin-top:10px;
 	margin-bottom:40px;
+}
+img.mg-sm,img.mg-md,img.mg-lg{
+	margin-top: 0;
+}
+img.mg-sm{
+	margin-bottom:10px;
+}
+img.mg-md{
+	margin-bottom:30px;
+}
+img.mg-lg{
+	margin-bottom:50px;
 }
 
 /* = Buttons
@@ -374,6 +359,25 @@ button{
 
 
 
+/* Image Frame */
+.img-frame,.img-frame-md,.img-frame-lg,.img-frame-rd,.img-frame-rd-md,.img-frame-rd-lg{
+	background:#FFF;
+	border:1px solid rgba(0,0,0,0.1);
+	box-shadow:0 2px 2px rgba(0,0,0,0.05);
+	padding:4px;
+}
+.img-frame{
+	border-radius:3px;
+}
+.img-frame-md,.img-frame-lg{
+	border-radius:6px;
+}
+.img-frame-md,.img-frame-rd-md{
+	padding:8px;
+}
+.img-frame-lg,.img-frame-rd-lg{
+	padding:14px;
+}
 
 /* = Text & Icon Styles
 -------------------------------------------------------------- */
@@ -488,15 +492,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	color:#FEFFFE!important;
 	background-color:#157EAC;
 }
+.logo-width{
+	max-width:200px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
 
 /* Background colour styles */
 
-.bgc-black{
-	background-color:#000000;
-}
 .bgc-white{
 	background-color:#ffffff;
 }
